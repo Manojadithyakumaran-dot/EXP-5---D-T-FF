@@ -163,7 +163,7 @@ The design was compiled and simulated using Synopsys VCS, and the functionality 
 ## Output
 <img width="1920" height="1080" alt="EXPT-5" src="https://github.com/user-attachments/assets/e26a8aef-15e2-4991-9a8b-62d58fc53a3b" />
 
-
+ 
 ## Viva-Voce Questions
 
 ●	What is the difference between a latch and a flip-flop?
