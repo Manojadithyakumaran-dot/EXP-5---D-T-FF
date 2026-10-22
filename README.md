@@ -16,8 +16,7 @@ Q(next) = T ⊕ Q   (Q(next) = Q if T = 0, Q(next) = Q' if T = 1)
 
 ## Design / RTL Program
 // gedit dff_tff.v
-
- ```
+ 
 module dff (
     input  wire clk,   // clock
     input  wire rst,   // asynchronous active-high reset
@@ -47,16 +46,10 @@ module tff (
             Q <= Q;
     end
 endmodule
-
-```
 ## Testbench Program
-
-
 // gedit tb5.v
-
-
- module tb5;
  
+module tb5;
     reg  clk, rst, D, T;
     wire Qd, Qt;
  
@@ -91,7 +84,8 @@ endmodule
         // ---- Apply asynchronous reset ----
         rst = 1; D = 0; T = 0;
         #7  rst = 0;
-         // ---- Apply test vectors on successive clock edges ----
+ 
+        // ---- Apply test vectors on successive clock edges ----
         @(negedge clk); D = 1; T = 1;
         @(negedge clk); D = 0; T = 1;
         @(negedge clk); D = 1; T = 0;
@@ -105,7 +99,9 @@ endmodule
  
         #20 $finish;
     end
-    endmodule
+endmodule
+
+
 
 ## Truth Table
 
@@ -165,7 +161,8 @@ Q(next) = T ⊕ Q   (T Flip-Flop)
 The design was compiled and simulated using Synopsys VCS, and the functionality was verified using DVE waveform analysis, matching the expected truth table.
 
 ## Output
-<img width="595" height="369" alt="image" src="https://github.com/user-attachments/assets/38290e4d-a813-4e0c-b891-68044c90623b" />
+<img width="1920" height="1080" alt="EXPT-5" src="https://github.com/user-attachments/assets/e26a8aef-15e2-4991-9a8b-62d58fc53a3b" />
+
 
 ## Viva-Voce Questions
 
